@@ -14,6 +14,10 @@ new-db-table:
 	docker compose exec web rails generate scaffold User account_name:string password:string admin_flag:boolean
 bash:
 	docker compose exec web /bin/bash
+seed:
+	docker compose exec web rails db:seed
+routes:
+	docker compose exec web rails routes
 # build:
 # 	docker build ./ -t railstest --no-cache
 # run:
